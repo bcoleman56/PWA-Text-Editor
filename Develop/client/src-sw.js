@@ -5,8 +5,10 @@ const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
+// precacheAndRoute() takes in an array of the URLs to precache.
 precacheAndRoute(self.__WB_MANIFEST);
 
+// Implementation of our precache strategy
 const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
@@ -19,6 +21,7 @@ const pageCache = new CacheFirst({
   ],
 });
 
+// Implementation of our warmcache strategy
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
@@ -27,4 +30,11 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
-registerRoute();
+registerRoute(
+  ({ request }) => request.destination === 'document',
+  // Uses the pageCache caching strategy defines above
+  pageCache
+);
+
+offlineFallback();
+
