@@ -5,7 +5,9 @@
 
 ## Description
 
-A text editor that can be used both online and offline.
+A text editor that is a Progressive Web App, that can be used both online and offline. The text you write will save every time the application loses focus.
+
+Click the link to view the page: [PWA-Text-Editor](https://pwa-text-editor56-eea9294637fa.herokuapp.com/)
 
 
 ## Table of Contents
@@ -18,22 +20,33 @@ A text editor that can be used both online and offline.
 
 ## Installation
 
-Use the install button on the website.
+To install this application go to the website and click the install button at the top of the page. 
+[PWA-Text-Editor](https://pwa-text-editor56-eea9294637fa.herokuapp.com/)
 
 
 ## Usage
 
-You can use the application on the website, or download it on the website and use it offline.
+You can use the application on the website, or download it on the website and use it offline. 
+[PWA-Text-Editor](https://pwa-text-editor56-eea9294637fa.herokuapp.com/)
 
 
 ## Credits
 
-In this applicaiton I used many npm packages.
+Some of the npm packages I used are listed below:
+* babel
+* concurrently
+* express
+* idb
+* nodemon
+* webpack
+* workbox
+
+To see a complete list, look in the package.json files within the project. 
 
 
 ## How to Contribute
 
-N/A
+To contribute to the project, clone the repository, improve the code, and make a pull request.
 
 ## Tests
 
