@@ -32,7 +32,7 @@ module.exports = () => {
 
       // Creates a manifest.json file
       new WebpackPwaManifest({
-        fingerprints: false,
+        fingerprints: true,
         inject: true,
         name: 'JATE',
         short_name: 'JATE',
