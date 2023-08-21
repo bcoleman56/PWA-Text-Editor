@@ -32,7 +32,7 @@ module.exports = () => {
 
       // Creates a manifest.json file
       new WebpackPwaManifest({
-        fingerprints: false,
+        fingerprints: true,
         inject: true,
         name: 'JATE',
         short_name: 'JATE',
@@ -67,6 +67,7 @@ module.exports = () => {
             options: {
               presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            }
           }
         }
       ],
